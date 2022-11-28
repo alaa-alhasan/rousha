@@ -183,13 +183,13 @@ Checkout
                     <div class="choose-payment-methods">
                         <label class="payment-method">
                             <input name="payment-method" id="payment-method-bank" value="cod" type="radio" wire:model="paymentmode">
-                            <span>Cash On Delivery</span>
+                            <span>Cash On Delivery (Just for testing)</span>
                             <span class="payment-desc">Order Now Pay on Delivery</span>
                         </label>
                         <label class="payment-method">
                             <input name="payment-method" id="payment-method-visa" value="card" type="radio" wire:model="paymentmode">
                             <span>Credit Card</span>
-                            <span class="payment-desc">There are many variations of passages of Lorem Ipsum available</span>
+                            <span class="payment-desc">Use Your Card Simply</span>
                         </label>
                         {{-- <label class="payment-method">
                             <input name="payment-method" id="payment-method-paypal" value="paypal" type="radio" wire:model="paymentmode">
@@ -212,15 +212,31 @@ Checkout
 
                     <button type="submit" class="btn btn-medium">Place order now</button>
                 </div>
-                <div class="summary-item shipping-method">
+                {{-- <div class="summary-item shipping-method">
                     <h4 class="title-box f-title">Shipping method</h4>
                     <p class="summary-info"><span class="title">Flat Rate</span></p>
                     <p class="summary-info"><span class="title">Fixed $0</span></p>
                     
-                </div>
+                </div> --}}
             </div>
         </form>
         </div><!--end main content area-->
     </div><!--end container-->
 
 </main>
+
+<script>
+    window.addEventListener('cod_order_success', event => {
+        toastr.success(event.detail.message)
+    });
+    window.addEventListener('stripe_order_success', event => {
+        toastr.success(event.detail.message)
+    });
+
+    window.addEventListener('mail_sent_success', event => {
+        toastr.info(event.detail.message)
+    });
+    window.addEventListener('stripe_order_faild', event => {
+        toastr.error(event.detail.message)
+    });
+</script>

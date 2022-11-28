@@ -100,6 +100,9 @@ class CheckoutComponent extends Component
     }
 
     public function placeOrder(){
+
+        $succ = false;
+
         $this->validate([
             'firstname' => 'required',
             'lastname' => 'required',
@@ -188,6 +191,10 @@ class CheckoutComponent extends Component
         if($this->paymentmode == 'cod'){
             $this->makeTransaction($order->id, 'pending');
             $this->resetCart();
+            $this->dispatchBrowserEvent('cod_order_success',[
+                'message' => 'Pinding Your Order Successfully',
+            ]);
+            $succ = true;
         }
         else if($this->paymentmode == 'card'){
             $stripe = Stripe::make(env('STRIPE_KEY'));
@@ -240,18 +247,32 @@ class CheckoutComponent extends Component
                         if($charge['status'] == 'succeeded'){
                             $this->makeTransaction($order->id, 'approved');
                             $this->resetCart();
+                            $this->dispatchBrowserEvent('stripe_order_success',[
+                                'message' => 'Approved Your Order Successfully',
+                            ]);
+                            $succ = true;
                         }
                         else {
+                            $order->delete(); // undo
                             session()->flash('stripe_error', "Error in Transaction!");
+                            $this->dispatchBrowserEvent('stripe_order_faild',[
+                                'message' => 'Faild! Error in Transaction',
+                            ]);
                             $this->thankyou = 0;
                         }
             }catch(Exception $e){
+                $order->delete(); // undo
                 session()->flash('stripe_error', $e->getMessage());
+                $this->dispatchBrowserEvent('stripe_order_faild',[
+                    'message' => 'Faild! Something wrong',
+                ]);
                 $this->thankyou = 0;
             }
         }
 
-        $this->sendOrderComfirmationMail($order);
+        if($succ == true){
+            $this->sendOrderComfirmationMail($order);
+        }
 
     }
 
@@ -272,6 +293,9 @@ class CheckoutComponent extends Component
 
     public function sendOrderComfirmationMail($order){
         Mail::to($order->email)->send(new OrderMail($order));
+        $this->dispatchBrowserEvent('mail_sent_success',[
+            'message' => 'check your email',
+        ]);
     }
 
     public function verifyForCheckout(){
