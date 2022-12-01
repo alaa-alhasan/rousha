@@ -9,7 +9,7 @@
 							<i class="fa fa-truck" aria-hidden="true"></i>
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Free Shipping</h4>
-								<p class="fc-desc">Free On Oder Over $99</p>
+								<p class="fc-desc">Not Available Now</p>
 							</div>
 
 						</li>
@@ -17,7 +17,7 @@
 							<i class="fa fa-recycle" aria-hidden="true"></i>
 							<div class="wrap-left-info">
 								<h4 class="fc-name">Guarantee</h4>
-								<p class="fc-desc">30 Days Money Back</p>
+								<p class="fc-desc">7 Days Money Back</p>
 							</div>
 
 						</li>

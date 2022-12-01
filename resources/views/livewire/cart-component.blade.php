@@ -207,7 +207,7 @@ Cart
                                         <div class="wrap-btn">
                                             <a href="#" class="function-link" wire:click.prevent="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->sale_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>
@@ -216,7 +216,7 @@ Cart
                                         <div class="wrap-btn">
                                             <a href="#" class="function-link" wire:click.prevent="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->regular_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$vProduct->id}},'{{$vProduct->name}}',{{$vProduct->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>

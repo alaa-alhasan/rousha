@@ -51,15 +51,17 @@ class CheckoutComponent extends Component
 
     public function mount(){
         $current_user = Profile::where('user_id',Auth::user()->id)->first();
-        $this->firstname = Auth::user()->name ;
-        $this->email = Auth::user()->email ;
-        $this->mobile = $current_user->mobile ;
-        $this->line1 = $current_user->line1 ;
-        $this->line2 = $current_user->line2 ;
-        $this->city = $current_user->city ;
-        $this->province = $current_user->province ;
-        $this->country = $current_user->country ;
-        $this->zipcode = $current_user->zipcode ;
+        if($current_user){
+            $this->firstname = Auth::user()->name ;
+            $this->email = Auth::user()->email ;
+            $this->mobile = $current_user->mobile ;
+            $this->line1 = $current_user->line1 ;
+            $this->line2 = $current_user->line2 ;
+            $this->city = $current_user->city ;
+            $this->province = $current_user->province ;
+            $this->country = $current_user->country ;
+            $this->zipcode = $current_user->zipcode ;
+        }
     }
 
     public function updated($fields){

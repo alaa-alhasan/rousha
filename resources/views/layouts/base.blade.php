@@ -151,7 +151,7 @@
 					<div class="mid-section main-info-area">
 
 						<div class="wrap-logo-top left-section">
-							<a href="{{ route('home') }}" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}" alt="mercado"></a>
+							<a href="{{ route('home') }}" class="link-to-home"><img src="{{ asset('assets/images/logo-top-1.png') }}" alt="mercado" style="height: 100px"></a>
 						</div>
 
 						@livewire('header-search-component');

@@ -122,14 +122,14 @@ Product Details
                             @if($product->sale_price > 0 && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now() )
                                 <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">
                                     Add to Cart
-                                    <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                    <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                         <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                     </span>
                                 </a>
                             @else
                                 <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
                                     Add to Cart
-                                    <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                    <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                         <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                     </span>
                                 </a>
@@ -252,7 +252,7 @@ Product Details
                                     <i class="fa fa-truck" aria-hidden="true"></i>
                                     <div class="right-content">
                                         <b class="title">Free Shipping</b>
-                                        <span class="subtitle">On Oder Over $99</span>
+                                        <span class="subtitle">Not Available Now</span>
                                         <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
                                     </div>
                                 </a>
@@ -351,7 +351,7 @@ Product Details
                                         <div class="wrap-btn">
                                             <a href="#" class="function-link" wire:click.prevent="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->sale_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>
@@ -360,7 +360,7 @@ Product Details
                                         <div class="wrap-btn">
                                             <a href="#" class="function-link" wire:click.prevent="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->regular_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$r_product->id}},'{{$r_product->name}}',{{$r_product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>

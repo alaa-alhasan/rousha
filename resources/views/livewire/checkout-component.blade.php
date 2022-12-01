@@ -154,7 +154,7 @@ Checkout
                 <div class="summary-item payment-method">
                     <h4 class="title-box">Payment Method</h4>
                     @if($paymentmode == 'card')
-                        <div class="wrap-address-billing" style="border: 1px solid #ff2832; padding: 5px">
+                        <div class="wrap-address-billing" style="border: 1px solid #000000; padding: 5px">
                             @if(Session::has('stripe_error'))
                             <div class="alert alert-danger">{{Session::get('stripe_error')}}</div>
                             @endif

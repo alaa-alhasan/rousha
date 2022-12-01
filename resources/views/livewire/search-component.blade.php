@@ -30,7 +30,7 @@ Search Results
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title">Search: Filter Results <span style="color: #ff2832">({{$products->count()}})</span></h1>
+                    <h1 class="shop-title">Search: Filter Results <span style="color: #000000">({{$products->count()}})</span></h1>
 
                     <div class="wrap-right">
 
@@ -93,7 +93,7 @@ Search Results
                                             <div class="wrap-price"><ins><p class="product-price">${{$product->sale_price}}</p></ins> <del><p class="product-price">${{$product->regular_price}}</p></del></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>
@@ -101,7 +101,7 @@ Search Results
                                             <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>
@@ -167,7 +167,7 @@ Search Results
                                             <div class="wrap-price"><ins><p class="product-price">${{$product->sale_price}}</p></ins> <del><p class="product-price">${{$product->regular_price}}</p></del></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="max-width: 50%">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>
@@ -175,7 +175,7 @@ Search Results
                                             <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="max-width: 50%">
                                                 Add To Cart
-                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                 </span>
                                             </a>

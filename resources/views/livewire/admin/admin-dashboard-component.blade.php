@@ -231,7 +231,14 @@ Dashboard
                                         <td>{{$order->mobile}}</td>
                                         <td>{{$order->email}}</td>
                                         <td>{{$order->zipcode}}</td>
-                                        <td>{{$order->status}}</td>
+                                        <td>
+                                          @php
+                                            if($order->status == 'canceled'){$color = 'red';}elseif($order->status == 'delivered'){$color = 'green';}else{$color = 'blue';}
+                                          @endphp
+                                          <span style="color: {{$color}}">
+                                          {{$order->status}}
+                                          </span>
+                                        </td> 
                                         <td>{{$order->created_at}}</td>
                                         <td><a href="{{route('admin.orderdetails',['order_id'=>$order->id])}}" class="btn btn-info btn-sm">Details</a></td>
                                         

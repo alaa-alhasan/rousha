@@ -88,7 +88,7 @@ HOME
                         <div class="wrap-btn">
                             <a href="#" class="function-link" wire:click.prevent="store({{$sproduct->id}},'{{$sproduct->name}}',{{$sproduct->sale_price}})">
                                 Add To Cart
-                                <span wire:loading wire:target="store({{$sproduct->id}},'{{$sproduct->name}}',{{$sproduct->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                <span wire:loading wire:target="store({{$sproduct->id}},'{{$sproduct->name}}',{{$sproduct->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                     <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                 </span>
                             </a>
@@ -163,7 +163,7 @@ HOME
                                                 <div class="wrap-btn">
                                                     <a href="#" class="function-link" wire:click.prevent="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->sale_price}})">
                                                         Add To Cart
-                                                        <span wire:loading wire:target="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                        <span wire:loading wire:target="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                             <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                         </span>
                                                     </a>
@@ -172,7 +172,7 @@ HOME
                                                 <div class="wrap-btn">
                                                     <a href="#" class="function-link" wire:click.prevent="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})">
                                                         Add To Cart
-                                                        <span wire:loading wire:target="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                        <span wire:loading wire:target="store({{$lproduct->id}},'{{$lproduct->name}}',{{$lproduct->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                             <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                         </span>
                                                     </a>
@@ -266,7 +266,7 @@ HOME
                                                 <div class="wrap-btn">
                                                     <a href="#" class="function-link" wire:click.prevent="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->sale_price}})">
                                                         Add To Cart
-                                                        <span wire:loading wire:target="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->sale_price}})" style="font-size: 14px; color:#365db5;">
+                                                        <span wire:loading wire:target="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                             <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                         </span>
                                                     </a>
@@ -275,7 +275,7 @@ HOME
                                                 <div class="wrap-btn">
                                                     <a href="#" class="function-link" wire:click.prevent="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->regular_price}})">
                                                         Add To Cart
-                                                        <span wire:loading wire:target="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->regular_price}})" style="font-size: 14px; color:#365db5;">
+                                                        <span wire:loading wire:target="store({{$c_product->id}},'{{$c_product->name}}',{{$c_product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
                                                             <i class="fa fa-spinner fa-pulse fa-fw"></i>
                                                         </span>
                                                     </a>

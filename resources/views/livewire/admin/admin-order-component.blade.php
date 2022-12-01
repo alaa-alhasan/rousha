@@ -73,7 +73,7 @@ Orders
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'delivered')">Delivered</a></li>
-                                                    <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Canceled</a></li>
+                                                    {{-- <li><a href="#" wire:click.prevent="updateOrderStatus({{$order->id}},'canceled')">Canceled</a></li> --}}
                                                 </ul>
                                             </div>
                                         </td>
