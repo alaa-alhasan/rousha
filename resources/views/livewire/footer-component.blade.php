@@ -51,7 +51,7 @@
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Contact Details</h3>
-								<p class="contact-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id consequuntur, earum perspiciatis et voluptatibus consectetur, aliquam ad nobis voluptates quisquam deleniti architecto obcaecati cum.</p>
+								<p class="contact-txt">Roussha International was established in 2022 AD, We work to find everything new in the world of fashion, elegance, and others. We select the finest products for you very carefully and guarantee that all our products are 100% original. Your trust in us is our goal.</p>
 								<div class="item-content">
 									<div class="wrap-contact-detail">
 										<ul>
@@ -123,6 +123,8 @@
 											<ul>
 												<li class="menu-item"><a href="{{ route('contact') }}" class="link-term">Contact Us</a></li>
 												<li class="menu-item"><a href="{{ route('aboutus') }}" class="link-term">About Us</a></li>
+												<li class="menu-item"><a href="{{ route('returnexchange') }}" class="link-term">Returns & Exchanges</a></li>
+												<li class="menu-item"><a href="{{ route('privacypolicy') }}" class="link-term">Privacy Policy</a></li>
 												<li class="menu-item"><a href="{{ route('shop') }}" class="link-term">Shop</a></li>
 											</ul>
 										</div>

@@ -26,6 +26,7 @@ Edit Profile
                         <div class="col-md-8">
                             <p><b>Name: </b><input type="text" class="form-control" wire:model="name"></p>
                             <p><b>Email: </b>{{$email}}</p>
+                            <p><b>Birthdate: </b><input type="date" class="form-control" wire:model="birthdate"></p>
                             <p><b>Phone: </b><input type="text" class="form-control" wire:model="mobile"></p>
                             <hr>
                             <p><b>Line1: </b><input type="text" class="form-control" wire:model="line1"></p>

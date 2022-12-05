@@ -13,6 +13,7 @@ class UserEditProfileComponent extends Component
     use WithFileUploads;
     public $name;
     public $email;
+    public $birthdate;
     public $mobile;
     public $image;
     public $line1;
@@ -28,6 +29,7 @@ class UserEditProfileComponent extends Component
 
         $this->name = $user->name;
         $this->email = $user->email;
+        $this->birthdate = $user->date_of_birth;
         $this->mobile = $user->mobile;
         $this->image = $user->image;
         $this->line1 = $user->line1;
@@ -45,6 +47,7 @@ class UserEditProfileComponent extends Component
         $user->save();
 
         $user->profile->mobile = $this->mobile;
+        $user->profile->date_of_birth = $this->birthdate;
         if($this->newimage){
             if($this->image){
                 unlink('assets/images/profile/'.$this->image);

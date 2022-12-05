@@ -17,7 +17,7 @@ About us
         <!-- <div class="main-content-area"> -->
             <div class="aboutus-info style-center">
                 <b class="box-title">Interesting Facts</b>
-                <p class="txt-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+                <p class="txt-content">Roussha International was established in 2022 AD, We work to find everything new in the world of fashion, elegance, and others. We select the finest products for you very carefully and guarantee that all our products are 100% original. Your trust in us is our goal.</p>
             </div>
 
             <div class="row">
@@ -25,22 +25,23 @@ About us
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-info style-small-left">
                         <b class="box-title">What we really do?</b>
-                        <p class="txt-content">We seek out and connect with project managers in the emerging markets.  Our focus is to organize fundings that connect our customers to their passion. We follow the client to the very end of the funding process.</p>
+                        <p class="txt-content">We create unique masterpieces of garments that are unique. Each piece has a feel, a history that began with an idea that shaped the design, the choice of colors, and the fabric. We don’t compromise on quality. All that, for our clients – just as unique and with exquisite taste for “that special something”.</p>
                     </div>
                     <div class="aboutus-info style-small-left">
                         <b class="box-title">History of the Company</b>
-                        <p class="txt-content">Izaat began his entrepreneurship in 2020 to follow his passion for design and real estate. Together with his partners, his company established itself quickly in the niche of customized real-estate development.</p>
+                        <p class="txt-content">One day I and my wife came back from a shopping tour barehanded. Nothing stood out to match her beauty and sense of self-empowerment. She told me that she craved something different that stood out from the mass of garments that would match the desire I had for her. Sometimes we crave something special and unique, full of passion– to express our personality and being. After all, our clothing is the skin we wear… The next morning the idea was born to start my own fashion brand. Because life is too short to not be surrounded by what we truly love.</p>
                     </div>
                 </div>
+                
 
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="aboutus-info style-small-left">
                         <b class="box-title">Our Vision</b>
-                        <p class="txt-content">To provide customers solutions that are life-changing, We strive to be a global leader in fashion-knit and fashion outerwear by empowering innovation and design to provide total customer satisfaction. </p>
+                        <p class="txt-content">We all wear our clothing as a second skin for the entire day. It is as much a part of our being as our hair, our eyes….we express our hearts thru our clothes. For that reason, we don’t compromise when it comes to expressing ourselves thru the clothing who we wear. Since clothes in stores and boutiques do not catch all the nuances that we seek, we took the task into our hands – to create the fashion that we and our clients really desire.</p>
                     </div>
                     <div class="aboutus-info style-small-left">
                         <b class="box-title">Cooperate with Us!</b>
-                        <p class="txt-content">Let's give form and life to your real-estate project. Contact us today.</p>
+                        <p class="txt-content">You didn’t find anything that suits your taste and desire? Do you have some idea of what you love to wear but cannot find it anywhere? Contact us and team up – we will make it a reality. Let us discover the roads to your desire together.</p>
                     </div>
                 </div>
 

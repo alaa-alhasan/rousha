@@ -19,6 +19,7 @@ My Profile
                     <div class="col-md-8">
                         <p><b>Name: </b>{{$user->name}}</p>
                         <p><b>Email: </b>{{$user->email}}</p>
+                        <p><b>Birthdate: </b>{{$user->profile->date_of_birth}}</p>
                         <p><b>Phone: </b>{{$user->profile->mobile}}</p>
                         <hr>
                         <p><b>Line1: </b>{{$user->profile->line1}}</p>

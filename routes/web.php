@@ -36,6 +36,8 @@ use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\ContactComponent;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\Privacypolicy;
+use App\Http\Livewire\Returnexchange;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\ThankyouComponent;
@@ -87,6 +89,10 @@ Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
 Route::get('/contact-us', ContactComponent::class)->name('contact');
 
 Route::get('/about-us', Aboutus::class)->name('aboutus');
+
+Route::get('/return-exchange', Returnexchange::class)->name('returnexchange');
+
+Route::get('/privacy-policy', Privacypolicy::class)->name('privacypolicy');
 
 /* Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
