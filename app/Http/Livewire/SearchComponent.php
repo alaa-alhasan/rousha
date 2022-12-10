@@ -42,7 +42,7 @@ class SearchComponent extends Component
         $this->pagesize = 12;
 
         $this->min_price = 1;
-        $this->max_price = 10000;
+        $this->max_price = 15000;
 
         $this->fill(request()->only('search','search_cat','search_cat_id'));
     }

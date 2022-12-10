@@ -44,7 +44,7 @@ class CategoryComponent extends Component
         $this->scategory_slug = $scategory_slug;
 
         $this->min_price = 1;
-        $this->max_price = 10000;
+        $this->max_price = 15000;
     }
 
     public function changeDisplayMode($mode)

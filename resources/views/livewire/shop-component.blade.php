@@ -333,7 +333,7 @@ Shop
             connect: true,
             range: {
                 'min' : 1,
-                'max' : 10000
+                'max' : 15000
             },
             pips: {
                 mode:'steps',
