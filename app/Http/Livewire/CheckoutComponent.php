@@ -273,7 +273,7 @@ class CheckoutComponent extends Component
         }
 
         if($succ == true){
-            $this->sendOrderComfirmationMail($order);
+            //$this->sendOrderComfirmationMail($order);
         }
 
     }
