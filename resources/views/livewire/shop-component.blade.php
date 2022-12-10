@@ -329,11 +329,11 @@ Shop
     <script>
         var slider = document.getElementById('slider');
         noUiSlider.create(slider,{
-            start: [1,10000],
+            start: [1,50000],
             connect: true,
             range: {
                 'min' : 1,
-                'max' : 15000
+                'max' : 50000
             },
             pips: {
                 mode:'steps',
