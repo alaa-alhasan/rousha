@@ -20,11 +20,11 @@ Search Results
                         <a href="{{$shopBanner->link}}" class="banner-link">
                             <figure><img src="{{ asset('assets/images/banners') }}/{{$shopBanner->image}}" alt="{{$shopBanner->name}}"></figure>
                         </a>
-                        <div class="banner-content">
+                        {{-- <div class="banner-content">
                             <h2>{{$shopBanner->label}}</h2>
                             <p>{!! $shopBanner->description !!}</p>
                             <a href="{{$shopBanner->link}}" class="btn">{{$shopBanner->btntxt}}</a>
-                        </div>
+                        </div> --}}
                     </div>
                 @endif
 
@@ -45,10 +45,10 @@ Search Results
 
                         <div class="sort-item product-per-page">
                             <select name="post-per-page" class="use-chosen" wire:model="pagesize">
-                                <option value="12" selected="selected">12 per page</option>
-                                <option value="16">16 per page</option>
+                                <option value="6" selected="selected">6 per page</option>
+                                <option value="10">10 per page</option>
+                                <option value="14">14 per page</option>
                                 <option value="18">18 per page</option>
-                                <option value="21">21 per page</option>
                                 <option value="24">24 per page</option>
                                 <option value="30">30 per page</option>
                                 <option value="32">32 per page</option>
@@ -201,6 +201,20 @@ Search Results
             </div><!--end main products area-->
 
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
+
+                <div class="widget mercado-widget filter-widget">
+                    
+                    <div class="widget-content">
+                        <div class="widget-banner">
+                            hand made
+                            <video width="270" height=auto autoplay muted loop>
+                                <source src="{{asset('assets/images/videos/1.mp4')}}" type="video/mp4">
+                            </video>
+                            
+                        </div>
+                    </div>
+                </div>
+
                 <div class="widget mercado-widget categories-widget">
                     <h2 class="widget-title">All Categories</h2>
                     <div class="widget-content">

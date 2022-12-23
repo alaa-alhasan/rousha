@@ -243,45 +243,19 @@ Product Details
             </div><!--end main products area-->
 
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
-                <div class="widget widget-our-services ">
+                
+                <div class="widget mercado-widget filter-widget">
+                    
                     <div class="widget-content">
-                        <ul class="our-services">
-
-                            <li class="service">
-                                <a class="link-to-service" href="#">
-                                    <i class="fa fa-truck" aria-hidden="true"></i>
-                                    <div class="right-content">
-                                        <b class="title">Free Shipping</b>
-                                        <span class="subtitle">Not Available Now</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="service">
-                                <a class="link-to-service" href="#">
-                                    <i class="fa fa-gift" aria-hidden="true"></i>
-                                    <div class="right-content">
-                                        <b class="title">Special Offer</b>
-                                        <span class="subtitle">Get a gift!</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="service">
-                                <a class="link-to-service" href="#">
-                                    <i class="fa fa-reply" aria-hidden="true"></i>
-                                    <div class="right-content">
-                                        <b class="title">Order Return</b>
-                                        <span class="subtitle">Return within 7 days</span>
-                                        <p class="desc">Lorem Ipsum is simply dummy text of the printing...</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="widget-banner">
+                            we have what you want
+                            <video width="270" height=auto autoplay muted loop>
+                                <source src="{{asset('assets/images/videos/4.mp4')}}" type="video/mp4">
+                            </video>
+                            
+                        </div>
                     </div>
-                </div><!-- Categories widget-->
+                </div>
 
                 <div class="widget mercado-widget widget-product">
                     <h2 class="widget-title">Popular Products</h2>

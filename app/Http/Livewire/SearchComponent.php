@@ -39,7 +39,7 @@ class SearchComponent extends Component
     public function mount(){
 
         $this->sorting = "default";
-        $this->pagesize = 12;
+        $this->pagesize = 6;
 
         $this->min_price = 1;
         $this->max_price = 50000;

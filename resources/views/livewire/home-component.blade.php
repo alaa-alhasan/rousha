@@ -10,7 +10,7 @@ HOME
                 @foreach ($sliders as $slide)
                     <div class="item-slide">
                         <img src="{{asset('assets/images/sliders')}}/{{$slide->image}}" alt="" class="img-slide">
-                        <div class="slide-info slide-1">
+                        {{-- <div class="slide-info slide-1">
                             <h2 class="f-title"><b>{{$slide->title}}</b></h2>
                             <span class="subtitle">{{$slide->subtitle}}</span>
                             <p class="sale-info">
@@ -19,7 +19,7 @@ HOME
                                 @endif
                             </p>
                             <a href="{{$slide->link}}" class="btn-link">Shop Now</a>
-                        </div>
+                        </div> --}}
                     </div>
                 @endforeach
             </div>

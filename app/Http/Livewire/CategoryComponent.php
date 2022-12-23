@@ -39,7 +39,7 @@ class CategoryComponent extends Component
     public function mount($category_slug,$scategory_slug=null){
 
         $this->sorting = "default";
-        $this->pagesize = 12;
+        $this->pagesize = 6;
         $this->$category_slug = $category_slug;
         $this->scategory_slug = $scategory_slug;
 
