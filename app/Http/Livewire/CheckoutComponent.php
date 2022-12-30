@@ -241,7 +241,7 @@ class CheckoutComponent extends Component
 
                         $charge = $stripe->charges()->create([
                             'customer' => $customer['id'],
-                            'currency' => 'USD',
+                            'currency' => 'CHF',
                             'amount' => session()->get('checkout')['total'],
                             'description' => 'Payment for order no: '. $order->id
                         ]);

@@ -200,7 +200,7 @@ Checkout
                         @error('paymentmode') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     @if(Session::has('checkout'))
-                        <p class="summary-info grand-total"><span>Grand Total</span> <span class="grand-total-price">${{Session::get('checkout')['total']}}</span></p>
+                        <p class="summary-info grand-total"><span>Grand Total</span> <span class="grand-total-price">{{Session::get('checkout')['total']}} CHF</span></p>
                     @endif
 
                     @if($errors->isEmpty())

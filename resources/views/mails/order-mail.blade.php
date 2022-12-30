@@ -31,12 +31,12 @@
             @endforeach
             <tr>
                 <td colspan="3" style="border-top: 1px solid #CCC;">
-                    <td style="font-size: 15px; font-weight:bold; border-top: 1px solid #CCC;">Subtotal : ${{$order->subtotal}}</td>
+                    <td style="font-size: 15px; font-weight:bold; border-top: 1px solid #CCC;">Subtotal : {{$order->subtotal}} CHF</td>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <td style="font-size: 15px; font-weight:bold;">Tax : ${{$order->tax}}</td>
+                    <td style="font-size: 15px; font-weight:bold;">Tax : {{$order->tax}} CHF</td>
                 </td>
             </tr>
             <tr>
@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td colspan="3">
-                    <td style="font-size: 22px; font-weight:bold;">Total : ${{$order->total}}</td>
+                    <td style="font-size: 22px; font-weight:bold;">Total : {{$order->total}} CHF</td>
                 </td>
             </tr>
         </tbody>

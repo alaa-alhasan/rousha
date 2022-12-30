@@ -47,9 +47,9 @@ Wishlist
                             <a href="{{ route('product.detalis',['slug'=>$item->model->slug]) }}" class="product-name"><span>{{ $item->model->name }}</span></a>
 
                             @if ($item->model->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                <div class="wrap-price"><ins><p class="product-price">${{$item->model->sale_price}}</p></ins> <del><p class="product-price">${{$item->model->regular_price}}</p></del></div>
+                                <div class="wrap-price"><ins><p class="product-price">{{$item->model->sale_price}} CHF</p></ins> <del><p class="product-price">{{$item->model->regular_price}} CHF</p></del></div>
                             @else
-                                <div class="wrap-price"><span class="product-price">${{ $item->model->regular_price }}</span></div>
+                                <div class="wrap-price"><span class="product-price">{{ $item->model->regular_price }} CHF</span></div>
                             @endif
 
                             <a href="#" class="btn add-to-cart" wire:click.prevent="moveProductFromWishlistToCart('{{$item->rowId}}')">
@@ -104,9 +104,9 @@ Wishlist
                                         data-product-desc="{{$vProduct->short_description}}"
                                         
                                         @if ($vProduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                            data-product-price="${{$vProduct->sale_price}}"
+                                            data-product-price="{{$vProduct->sale_price}} CHF"
                                         @else
-                                            data-product-price="${{$vProduct->regular_price}}"
+                                            data-product-price="{{$vProduct->regular_price}} CHF"
                                         @endif
                                         >
                                         <i class="fa fa-eye"></i>
@@ -139,9 +139,9 @@ Wishlist
                                 <a href="{{ route('product.detalis',['slug'=>$vProduct->slug]) }}" class="product-name"><span>{{ $vProduct->name }}</span></a>
 
                                 @if ($vProduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                    <div class="wrap-price"><ins><p class="product-price">${{$vProduct->sale_price}}</p></ins> <del><p class="product-price">${{$vProduct->regular_price}}</p></del></div>
+                                    <div class="wrap-price"><ins><p class="product-price">{{$vProduct->sale_price}} CHF</p></ins> <del><p class="product-price">{{$vProduct->regular_price}} CHF</p></del></div>
                                 @else
-                                    <div class="wrap-price"><span class="product-price">${{ $vProduct->regular_price }}</span></div>
+                                    <div class="wrap-price"><span class="product-price">{{ $vProduct->regular_price }} CHF</span></div>
                                 @endif
                                 
                             </div>

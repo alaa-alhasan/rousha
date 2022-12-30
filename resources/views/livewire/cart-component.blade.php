@@ -39,9 +39,9 @@ Cart
                             @endforeach
 
                             @if ($item->model->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                <div class="price-field produtc-price"><p class="price">${{$item->model->sale_price}}</p></div>
+                                <div class="price-field produtc-price"><p class="price">{{$item->model->sale_price}} CHF</p></div>
                             @else
-                                <div class="price-field produtc-price"><p class="price">${{$item->model->regular_price}}</p></div>
+                                <div class="price-field produtc-price"><p class="price">{{$item->model->regular_price}} CHF</p></div>
                             @endif
 
                             <div class="quantity">
@@ -52,7 +52,7 @@ Cart
                                 </div>
                                 <p class="text-center"><a href="#" wire:click.prevent="switchToSaveForLater('{{$item->rowId}}')">Save For Later</a></p>
                             </div>
-                            <div class="price-field sub-total"><p class="price">${{$item->subtotal}}</p></div>
+                            <div class="price-field sub-total"><p class="price">{{$item->subtotal}} CHF</p></div>
                             <div class="delete">
                                 <a href="#" wire:click.prevent="destroy('{{$item->rowId}}')" class="btn btn-delete" title="">
                                     <span>Delete from your cart</span>
@@ -72,16 +72,16 @@ Cart
             <div class="summary">
                 <div class="order-summary">
                     <h4 class="title-box">Order Summary</h4>
-                    <p class="summary-info"><span class="title">Subtotal</span><b class="index">${{Cart::instance('cart')->subtotal()}}</b></p>
+                    <p class="summary-info"><span class="title">Subtotal</span><b class="index">{{Cart::instance('cart')->subtotal()}} CHF</b></p>
                     @if(Session::has('coupon'))
-                        <p class="summary-info"><span class="title">Discount ({{Session::get('coupon')['code']}}) <a href="#" wire:click.prevent="revoveCoupon"><i class="fa fa-times text-danger"></i></a></span><b class="index"> -${{number_format($discount,2)}}</b></p>
-                        <p class="summary-info"><span class="title">Subtotal With Discount</span><b class="index">${{number_format($subtotalAfterDiscount,2)}}</b></p>
-                        <p class="summary-info"><span class="title">Tax ({{config('cart.tax')}}%)</span><b class="index">${{number_format($taxAfterDiscount,2)}}</b></p>
-                        <p class="summary-info total-info "><span class="title">Total</span><b class="index">${{number_format($totalAfterDiscount,2)}}</b></p>
+                        <p class="summary-info"><span class="title">Discount ({{Session::get('coupon')['code']}}) <a href="#" wire:click.prevent="revoveCoupon"><i class="fa fa-times text-danger"></i></a></span><b class="index"> -{{number_format($discount,2)}} CHF</b></p>
+                        <p class="summary-info"><span class="title">Subtotal With Discount</span><b class="index">{{number_format($subtotalAfterDiscount,2)}} CHF</b></p>
+                        <p class="summary-info"><span class="title">Tax ({{config('cart.tax')}}%)</span><b class="index">{{number_format($taxAfterDiscount,2)}} CHF</b></p>
+                        <p class="summary-info total-info "><span class="title">Total</span><b class="index">{{number_format($totalAfterDiscount,2)}} CHF</b></p>
                     @else
-                        <p class="summary-info"><span class="title">Tax</span><b class="index">${{Cart::instance('cart')->tax()}}</b></p>
+                        <p class="summary-info"><span class="title">Tax</span><b class="index">{{Cart::instance('cart')->tax()}} CHF</b></p>
                         <p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-                        <p class="summary-info total-info "><span class="title">Total</span><b class="index">${{Cart::instance('cart')->total()}}</b></p>
+                        <p class="summary-info total-info "><span class="title">Total</span><b class="index">{{Cart::instance('cart')->total()}} CHF</b></p>
                     @endif
                     
                 </div>
@@ -142,9 +142,9 @@ Cart
                         </div>
                         
                         @if ($item->model->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                            <div class="price-field produtc-price"><p class="price">${{$item->model->sale_price}}</p></div>
+                            <div class="price-field produtc-price"><p class="price">{{$item->model->sale_price}} CHF</p></div>
                         @else
-                            <div class="price-field produtc-price"><p class="price">${{$item->model->regular_price}}</p></div>
+                            <div class="price-field produtc-price"><p class="price">{{$item->model->regular_price}} CHF</p></div>
                         @endif
 
                         <div class="quantity">
@@ -194,9 +194,9 @@ Cart
                                             data-product-desc="{{$vProduct->short_description}}"
                                             
                                             @if ($vProduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                                data-product-price="${{$vProduct->sale_price}}"
+                                                data-product-price="{{$vProduct->sale_price}} CHF"
                                             @else
-                                                data-product-price="${{$vProduct->regular_price}}"
+                                                data-product-price="{{$vProduct->regular_price}} CHF"
                                             @endif
                                             >
                                             <i class="fa fa-eye"></i>
@@ -227,9 +227,9 @@ Cart
                                     <a href="{{ route('product.detalis',['slug'=>$vProduct->slug]) }}" class="product-name"><span>{{ $vProduct->name }}</span></a>
 
                                     @if ($vProduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                        <div class="wrap-price"><ins><p class="product-price">${{$vProduct->sale_price}}</p></ins> <del><p class="product-price">${{$vProduct->regular_price}}</p></del></div>
+                                        <div class="wrap-price"><ins><p class="product-price">{{$vProduct->sale_price}} CHF</p></ins> <del><p class="product-price">{{$vProduct->regular_price}} CHF</p></del></div>
                                     @else
-                                        <div class="wrap-price"><span class="product-price">${{ $vProduct->regular_price }}</span></div>
+                                        <div class="wrap-price"><span class="product-price">{{ $vProduct->regular_price }} CHF</span></div>
                                     @endif
                                     
                                 </div>

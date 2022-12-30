@@ -90,7 +90,7 @@ Search Results
                                         <a href="{{ route('product.detalis',['slug'=>$product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
                         
                                         @if ($product->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                            <div class="wrap-price"><ins><p class="product-price">${{$product->sale_price}}</p></ins> <del><p class="product-price">${{$product->regular_price}}</p></del></div>
+                                            <div class="wrap-price"><ins><p class="product-price">{{$product->sale_price}} CHF</p></ins> <del><p class="product-price">{{$product->regular_price}} CHF</p></del></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">
                                                 Add To Cart
                                                 <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
@@ -98,7 +98,7 @@ Search Results
                                                 </span>
                                             </a>
                                         @else
-                                            <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
+                                            <div class="wrap-price"><span class="product-price">{{ $product->regular_price }} CHF</span></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
                                                 Add To Cart
                                                 <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
@@ -164,7 +164,7 @@ Search Results
                                         <p style="margin-top: 15px">{!!$product->short_description!!}</p>
                         
                                         @if ($product->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                            <div class="wrap-price"><ins><p class="product-price">${{$product->sale_price}}</p></ins> <del><p class="product-price">${{$product->regular_price}}</p></del></div>
+                                            <div class="wrap-price"><ins><p class="product-price">{{$product->sale_price}} CHF</p></ins> <del><p class="product-price">{{$product->regular_price}} CHF</p></del></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="max-width: 50%">
                                                 Add To Cart
                                                 <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})" style="font-size: 14px; color:#FFFFFF;">
@@ -172,7 +172,7 @@ Search Results
                                                 </span>
                                             </a>
                                         @else
-                                            <div class="wrap-price"><span class="product-price">${{ $product->regular_price }}</span></div>
+                                            <div class="wrap-price"><span class="product-price">{{ $product->regular_price }} CHF</span></div>
                                             <a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="max-width: 50%">
                                                 Add To Cart
                                                 <span wire:loading wire:target="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})" style="font-size: 14px; color:#FFFFFF;">
@@ -258,7 +258,7 @@ Search Results
                 </div><!-- brand widget--> --}}
 
                 <div class="widget mercado-widget filter-widget price-filter">
-                    <h2 class="widget-title">Price <span class="text-info">${{$min_price}} - ${{$max_price}}</span></h2>
+                    <h2 class="widget-title">Price (CHF) <span class="text-info">{{$min_price}} - {{$max_price}}</span></h2>
                     <div class="widget-content" style="margin-bottom: 40px">
                         <div id="slider" wire:ignore></div>
                     </div>
@@ -323,7 +323,7 @@ Search Results
                                     </div>
                                     <div class="product-info">
                                         <a href="{{ route('product.detalis',['slug'=>$p_product->slug]) }}" class="product-name"><span>{{ $p_product->name }}</span></a>
-                                        <div class="wrap-price"><span class="product-price">${{ $p_product->regular_price }}</span></div>
+                                        <div class="wrap-price"><span class="product-price">{{ $p_product->regular_price }} CHF</span></div>
                                     </div>
                                 </div>
                             </li>

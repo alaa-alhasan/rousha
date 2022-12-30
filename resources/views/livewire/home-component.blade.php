@@ -81,7 +81,7 @@ HOME
                                 data-product-name="{{$sproduct->name}}" 
                                 data-product-image="{{ asset('assets/images/products') }}/{{$sproduct->image}}" 
                                 data-product-desc="{{$sproduct->short_description}}"
-                                data-product-price="${{$sproduct->sale_price}}">
+                                data-product-price="{{$sproduct->sale_price}} CHF">
                                 <i class="fa fa-eye"></i>
                             </a>
                         </div>
@@ -96,7 +96,7 @@ HOME
                     </div>
                     <div class="product-info">
                         <a href="{{route('product.detalis',['slug'=>$sproduct->slug])}}" class="product-name"><span>{{$sproduct->name}}</span></a>
-                        <div class="wrap-price"><ins><p class="product-price">${{$sproduct->sale_price}}</p></ins> <del><p class="product-price">${{$sproduct->regular_price}}</p></del></div>
+                        <div class="wrap-price"><ins><p class="product-price">{{$sproduct->sale_price}} CHF</p></ins> <del><p class="product-price">{{$sproduct->regular_price}} CHF</p></del></div>
                     </div>
                 </div>
                 @endforeach
@@ -150,9 +150,9 @@ HOME
                                                     data-product-desc="{{$lproduct->short_description}}"
                                                     
                                                     @if ($lproduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                                        data-product-price="${{$lproduct->sale_price}}"
+                                                        data-product-price="{{$lproduct->sale_price}} CHF"
                                                     @else
-                                                        data-product-price="${{$lproduct->regular_price}}"
+                                                        data-product-price="{{$lproduct->regular_price}} CHF"
                                                     @endif
                                                     >
                                                     <i class="fa fa-eye"></i>
@@ -184,9 +184,9 @@ HOME
                                             <a href="{{route('product.detalis',['slug'=>$lproduct->slug])}}" class="product-name"><span>{{$lproduct->name}}</span></a>
 
                                             @if ($lproduct->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                                <div class="wrap-price"><ins><p class="product-price">${{$lproduct->sale_price}}</p></ins> <del><p class="product-price">${{$lproduct->regular_price}}</p></del></div>
+                                                <div class="wrap-price"><ins><p class="product-price">{{$lproduct->sale_price}} CHF</p></ins> <del><p class="product-price">{{$lproduct->regular_price}} CHF</p></del></div>
                                             @else
-                                                <div class="wrap-price"><span class="product-price">${{ $lproduct->regular_price }}</span></div>
+                                                <div class="wrap-price"><span class="product-price">{{ $lproduct->regular_price }} CHF</span></div>
                                             @endif
                                         </div>
                                     </div>
@@ -253,9 +253,9 @@ HOME
                                                     data-product-desc="{{$c_product->short_description}}"
                                                     
                                                     @if ($c_product->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                                        data-product-price="${{$c_product->sale_price}}"
+                                                        data-product-price="{{$c_product->sale_price}} CHF"
                                                     @else
-                                                        data-product-price="${{$c_product->regular_price}}"
+                                                        data-product-price="{{$c_product->regular_price}} CHF"
                                                     @endif
                                                     >
                                                     <i class="fa fa-eye"></i>
@@ -286,9 +286,9 @@ HOME
                                             <a href="{{route('product.detalis',['slug'=>$c_product->slug])}}" class="product-name"><span>{{$c_product->name}}</span></a>
                                             
                                             @if ($c_product->sale_price && $sale->status == 1 && $sale->sale_date > Carbon\Carbon::now())
-                                                <div class="wrap-price"><ins><p class="product-price">${{$c_product->sale_price}}</p></ins> <del><p class="product-price">${{$c_product->regular_price}}</p></del></div>
+                                                <div class="wrap-price"><ins><p class="product-price">{{$c_product->sale_price}} CHF</p></ins> <del><p class="product-price">{{$c_product->regular_price}} CHF</p></del></div>
                                             @else
-                                                <div class="wrap-price"><span class="product-price">${{ $c_product->regular_price }}</span></div>
+                                                <div class="wrap-price"><span class="product-price">{{ $c_product->regular_price }} CHF</span></div>
                                             @endif
                                         </div>
                                     </div>

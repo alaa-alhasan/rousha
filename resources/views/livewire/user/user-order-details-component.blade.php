@@ -69,11 +69,11 @@ Order Details
                                     </div>
                                     @endif
 
-                                    <div class="price-field produtc-price"><p class="price">${{$item->price}}</p></div>
+                                    <div class="price-field produtc-price"><p class="price">{{$item->price}} CHF</p></div>
                                     <div class="quantity">
                                         <h5>{{$item->quantity}}</h5>
                                     </div>
-                                    <div class="price-field sub-total"><p class="price">${{$item->price * $item->quantity}}</p></div>
+                                    <div class="price-field sub-total"><p class="price">{{$item->price * $item->quantity}} CHF</p></div>
                                     @if($order->status == 'delivered' && $item->rstatus == false)
                                         <div class="price-field sub-total"><p class="price"><a href="{{route('user.review',['order_item_id'=>$item->id])}}">Write Review</a></p></div>
                                     @endif
@@ -84,10 +84,10 @@ Order Details
                         <div class="summary">
                             <div class="order-summary">
                                 <h4 class="title-box">Order Summary</h4>
-                                <p class="summary-info"><span class="title">Subtotal</span><b class="index">${{$order->subtotal}}</b></p>
-                                <p class="summary-info"><span class="title">Tax</span><b class="index">${{$order->tax}}</b></p>
+                                <p class="summary-info"><span class="title">Subtotal</span><b class="index">{{$order->subtotal}} CHF</b></p>
+                                <p class="summary-info"><span class="title">Tax</span><b class="index">{{$order->tax}} CHF</b></p>
                                 <p class="summary-info"><span class="title">Shipping</span><b class="index">Free Shipping</b></p>
-                                <p class="summary-info"><span class="title">Total</span><b class="index">${{$order->total}}</b></p>
+                                <p class="summary-info"><span class="title">Total</span><b class="index">{{$order->total}} CHF</b></p>
                             </div>
                         </div>
                     </div>

@@ -40,11 +40,11 @@ Coupons
                                         <td>{{$coupon->code}}</td>
                                         <td>{{$coupon->type}}</td>
                                         @if($coupon->type == 'fixed')
-                                            <td>${{$coupon->value}}</td>
+                                            <td>{{$coupon->value}} CHF</td>
                                         @else
                                             <td>{{$coupon->value}} %</td>
                                         @endif
-                                        <td>${{$coupon->cart_value}}</td>
+                                        <td>{{$coupon->cart_value}} CHF</td>
                                         <td>{{$coupon->expiry_date}}</td>
                                         <td>
                                             <a href="{{route('admin.editcoupon',['coupon_id'=>$coupon->id])}}"><i class="fa fa-edit fa-2x"></i></a>

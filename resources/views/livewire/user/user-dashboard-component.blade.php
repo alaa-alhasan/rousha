@@ -61,8 +61,8 @@ Dashboard
               <div class="icon-stat">    
                 <div class="row">
                   <div class="col-xs-8 text-left">
-                    <span class="icon-stat-label">Total Cost</span>
-                    <span class="icon-stat-value">${{$totalCost}}</span>
+                    <span class="icon-stat-label">Total Cost (CHF)</span>
+                    <span class="icon-stat-value">{{$totalCost}}</span>
                   </div>   
                   <div class="col-xs-4 text-center">
                     <i class="fa fa-dollar icon-stat-visual bg-primary"></i>
@@ -133,10 +133,10 @@ Dashboard
                                 <thead>
                                     <tr>
                                         <th>Order Id</th>
-                                        <th>Subtotal</th>
-                                        <th>Discount</th>
-                                        <th>Tax</th>
-                                        <th>Total</th>
+                                        <th>Subtotal(CHF)</th>
+                                        <th>Discount(CHF)</th>
+                                        <th>Tax(CHF)</th>
+                                        <th>Total(CHF)</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
                                         <th>Mobile</th>
@@ -151,10 +151,10 @@ Dashboard
                                     @foreach ($orders as $order)
                                         <tr>
                                             <td>{{$order->id}}</td>
-                                            <td>${{$order->subtotal}}</td>
-                                            <td>${{$order->discount}}</td>
-                                            <td>${{$order->tax}}</td>
-                                            <td>${{$order->total}}</td>
+                                            <td>{{$order->subtotal}}</td>
+                                            <td>{{$order->discount}}</td>
+                                            <td>{{$order->tax}}</td>
+                                            <td>{{$order->total}}</td>
                                             <td>{{$order->firstname}}</td>
                                             <td>{{$order->lastname}}</td>
                                             <td>{{$order->mobile}}</td>

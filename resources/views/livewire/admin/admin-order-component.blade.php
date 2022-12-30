@@ -26,10 +26,10 @@ Orders
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Subtotal</th>
-                                    <th>Discount</th>
-                                    <th>Tax</th>
-                                    <th>Total</th>
+                                    <th>Subtotal(CHF)</th>
+                                    <th>Discount(CHF)</th>
+                                    <th>Tax(CHF)</th>
+                                    <th>Total(CHF)</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Mobile</th>
@@ -47,10 +47,10 @@ Orders
                                 @foreach ($orders as $order)
                                     <tr>
                                         <td>{{$i++}}</td>
-                                        <td>${{$order->subtotal}}</td>
-                                        <td>${{$order->discount}}</td>
-                                        <td>${{$order->tax}}</td>
-                                        <td>${{$order->total}}</td>
+                                        <td>{{$order->subtotal}}</td>
+                                        <td>{{$order->discount}}</td>
+                                        <td>{{$order->tax}}</td>
+                                        <td>{{$order->total}}</td>
                                         <td>{{$order->firstname}}</td>
                                         <td>{{$order->lastname}}</td>
                                         <td>{{$order->mobile}}</td>

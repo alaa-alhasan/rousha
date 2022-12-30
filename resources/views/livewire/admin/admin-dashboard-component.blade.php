@@ -61,8 +61,8 @@ Dashboard
             <div class="icon-stat">    
               <div class="row">
                 <div class="col-xs-8 text-left">
-                  <span class="icon-stat-label">Total Revenue</span>
-                  <span class="icon-stat-value">${{$totalRevenue}}</span>
+                  <span class="icon-stat-label">Total Revenue (CHF)</span>
+                  <span class="icon-stat-value">{{$totalRevenue}}</span>
                 </div>   
                 <div class="col-xs-4 text-center">
                   <i class="fa fa-dollar icon-stat-visual bg-primary"></i>
@@ -77,7 +77,7 @@ Dashboard
             <div class="icon-stat">    
               <div class="row">
                 <div class="col-xs-8 text-left">
-                  <span class="icon-stat-label">Total Sales</span>
+                  <span class="icon-stat-label">Total Sales (CHF)</span>
                   <span class="icon-stat-value">{{$totalSales}}</span>
                 </div>    
                 <div class="col-xs-4 text-center">
@@ -93,8 +93,8 @@ Dashboard
             <div class="icon-stat">    
               <div class="row">
                 <div class="col-xs-8 text-left">
-                  <span class="icon-stat-label">Today Revenue</span>
-                  <span class="icon-stat-value">${{$todayRevenue}}</span>
+                  <span class="icon-stat-label">Today Revenue (CHF)</span>
+                  <span class="icon-stat-value">{{$todayRevenue}}</span>
                 </div>    
                 <div class="col-xs-4 text-center">
                   <i class="fa fa-dollar icon-stat-visual bg-primary"></i>
@@ -109,7 +109,7 @@ Dashboard
             <div class="icon-stat">    
               <div class="row">
                 <div class="col-xs-8 text-left">
-                  <span class="icon-stat-label">Today Sales</span>
+                  <span class="icon-stat-label">Today Sales (CHF)</span>
                   <span class="icon-stat-value">{{$todaySales}}</span>
                 </div>    
                 <div class="col-xs-4 text-center">
@@ -129,7 +129,7 @@ Dashboard
               <div class="row">
                 <div class="col-xs-8 text-left">
                   <span class="icon-stat-label">Categories</span>
-                  <span class="icon-stat-value">${{$categories_count}}</span>
+                  <span class="icon-stat-value">{{$categories_count}}</span>
                 </div>   
                 <div class="col-xs-4 text-center">
                   <i class="fa fa-th-large icon-stat-visual bg-primary"></i>
@@ -161,7 +161,7 @@ Dashboard
               <div class="row">
                 <div class="col-xs-8 text-left">
                   <span class="icon-stat-label">Attributes</span>
-                  <span class="icon-stat-value">${{$attributes_count}}</span>
+                  <span class="icon-stat-value">{{$attributes_count}}</span>
                 </div>    
                 <div class="col-xs-4 text-center">
                   <i class="fa fa-envira icon-stat-visual bg-primary"></i>
@@ -201,10 +201,10 @@ Dashboard
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Subtotal</th>
-                                    <th>Discount</th>
-                                    <th>Tax</th>
-                                    <th>Total</th>
+                                    <th>Subtotal(CHF)</th>
+                                    <th>Discount(CHF)</th>
+                                    <th>Tax(CHF)</th>
+                                    <th>Total(CHF)</th>
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Mobile</th>
@@ -222,10 +222,10 @@ Dashboard
                                 @foreach ($orders as $order)
                                     <tr>
                                         <td>{{$i++}}</td>
-                                        <td>${{$order->subtotal}}</td>
-                                        <td>${{$order->discount}}</td>
-                                        <td>${{$order->tax}}</td>
-                                        <td>${{$order->total}}</td>
+                                        <td>{{$order->subtotal}}</td>
+                                        <td>{{$order->discount}}</td>
+                                        <td>{{$order->tax}}</td>
+                                        <td>{{$order->total}}</td>
                                         <td>{{$order->firstname}}</td>
                                         <td>{{$order->lastname}}</td>
                                         <td>{{$order->mobile}}</td>

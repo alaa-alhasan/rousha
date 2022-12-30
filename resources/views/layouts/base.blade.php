@@ -57,7 +57,7 @@
 									<a title="English" href="#"><span class="img label-before"><img src="{{ asset('assets/images/lang-en.png') }}" alt="lang-en"></span>English</a>
 								</li>
 								<li class="menu-item menu-item-has-children parent" >
-									<a title="Dollar (USD)" href="#"><i class="fa fa-dollar"></i> Dollar (USD)</a>
+									<a title="Swiss franc (CHF)" href="#">Swiss franc (CHF)</a>
 								</li>
 								@if(Route::has('login'))
 									@auth
