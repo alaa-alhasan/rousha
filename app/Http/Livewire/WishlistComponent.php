@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Sale;
 use Livewire\Component;
 use Cart;
+use Illuminate\Support\Facades\Auth;
 
 class WishlistComponent extends Component
 {
@@ -44,6 +45,9 @@ class WishlistComponent extends Component
 
     public function render()
     {
+        if(Auth::check()){
+            Cart::instance('wishlist')->store(Auth::user()->email);
+        }
 
         $viewedProducts = Product::orderBy('vtimes','DESC')->get()->take(10);
         $sale= Sale::find(1);

@@ -58,7 +58,7 @@ About us
                             <label>
                                 <input type="radio" class="hidden" name="showup" id="shoup2" value="shoup2">
                                 <span class="check-box"></span>
-                                <span class='function-name'>Best Quanlity</span>
+                                <span class='function-name'>Best Quality</span>
                                 <span class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</span>
                             </label>
                             <label>
